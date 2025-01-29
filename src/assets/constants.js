@@ -1,0 +1,6 @@
+export const    js="https://github.com/c0d1nn/tailwind-portfolio-2/blob/main/src/assets/javascript.png?raw=true"
+export  const css="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/css-icon.png    "
+export const html="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png"
+export const tailwind="https://github.com/c0d1nn/tailwind-portfolio-2/blob/main/src/assets/tailwind.png?raw=true"
+export const react="https://github.com/c0d1nn/tailwind-portfolio-2/blob/main/src/assets/react.png?raw=true"
+export const bootstrap="https://static-00.iconduck.com/assets.00/bootstrap-icon-2048x2048-az9h1iwm.png"

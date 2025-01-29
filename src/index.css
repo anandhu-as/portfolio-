@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+body{
+    background-color: black;
+}
+
+.playwrite-in-custom-1 {
+    font-family: "Playwrite IN", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
