@@ -4,8 +4,8 @@ const Animation = () => {
   return (
     <TypeAnimation className="text-white"
       sequence={[
-        "self taught ", 2000,
-        "frontend Developer", 2000,
+        "Self-Taught", 2000,
+        "Frontend Developer", 2000,
       ]}
       wrapper='span'
       speed={75}

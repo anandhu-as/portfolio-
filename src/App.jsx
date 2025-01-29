@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from './Components/NavBar/NavBar'
-import Home from './Components/Home/home'
+import Home from './Components/Home/Home'
 import Skills from './Components/skills/Skills'
 import Projects from './Components/Projects/Projects'
 import Contact from './Components/Contact/Contact'
@@ -13,9 +13,9 @@ const App = () => {
       <Skills />
       <br />
       <br />
-      <Projects/>
+      <Projects />
       <br />
-      <Contact/>
+      <Contact />
     </div>
   )
 }

@@ -3,7 +3,7 @@ import Project from './Project';
 import { IoLogoGithub } from "react-icons/io5";
 const Projects = () => {
     return (
-        <div className="max-w-[1200px] mx-auto py-8 px-4">
+        <div id='projects' className="max-w-[1200px] mx-auto py-8 px-4">
             <h1 className="text-4xl font-bold text-center text-white mb-8">Projects</h1>
             <Project />
             <div className="flex items-center justify-center mt-6 space-x-2">
