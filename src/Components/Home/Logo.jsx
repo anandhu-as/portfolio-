@@ -10,15 +10,15 @@ const Logo = () => {
                 className="flex items-center justify-center w-12 h-12 rounded-xl bg-black hover:bg-gray-800 transition duration-300 text-white shadow-lg">
                 <IoLogoGithub size={28} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/anandhu-as-413a28257/" target="_blank" rel="noopener noreferrer"
                 className="flex items-center justify-center w-12 h-12 rounded-xl bg-black hover:bg-blue-800 transition duration-300 text-white shadow-lg">
                 <IoLogoLinkedin size={28} />
             </a>
-            <a href="anandhuas0102@gmail.com" target="_blank" rel="noopener noreferrer"
+            <a href="mailto:anandhuas0102@gmail.com" target="_blank" rel="noopener noreferrer"
                 className="flex items-center justify-center w-12 h-12 rounded-xl bg-black hover:bg-red-400 transition duration-300 text-white shadow-lg">
                 <MdEmail size={28} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.instagram.com/ana_ndhu_as/" target="_blank" rel="noopener noreferrer"
                 className="flex items-center justify-center w-12 h-12 rounded-xl bg-black hover:bg-pink-500 transition duration-300 text-white shadow-lg">
                 <FaSquareInstagram size={28} />
             </a>

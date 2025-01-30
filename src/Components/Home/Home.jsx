@@ -5,9 +5,9 @@ import Logo from './Logo';
 
 const Home = () => {
     return (
-        <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-[1200px] mx-auto py-8 bg-black'>
+        <div id='/' className='grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-[1200px] mx-auto py-8 bg-black'>
             <div className="col-span-1 my-auto mx-auto flex justify-center">
-                <div className='w-[280px] h-[280px] lg:w-[350px] lg:h-[350px] overflow-hidden  border-1 shadow-lg hover:scale-105 transition-transform duration-300'>
+                <div className='w-[320px] h-[320px] lg:w-[400px] lg:h-[400px] overflow-hidden border-1 shadow-lg hover:scale-105 transition-transform duration-300 md:w-0.5'>
                     <img
                         src={profile}
                         alt="Profile"
