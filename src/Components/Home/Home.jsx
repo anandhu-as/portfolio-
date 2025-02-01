@@ -22,7 +22,7 @@ const Home = () => {
                 <div className="text-gray-400">
                     <p className="sm:text-lg my-6 lg:text-xl">
                         Hey, I’m Anandhu!<br />
-                        I’m a 19-year-old computer science student with a love for coding and all tech things. I’m always exploring new tools, building cool projects, and finding ways to solve problems. Right now, I’m diving deep into software development and looking for opportunities to learn and grow. Let’s connect!!!
+                        I’m a 19-year-old computer science student with a love for coding and all tech things, I’m always exploring new tools, building cool projects, and finding ways to solve problems. Right now, I’m diving deep into software development and looking for opportunities to learn and grow. Let’s connect!!!
                     </p>
                 </div>
                 <Logo />
