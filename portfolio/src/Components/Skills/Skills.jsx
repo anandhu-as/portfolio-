@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -16,12 +17,40 @@ import {
   SiMysql,
 } from "react-icons/si";
 
+/* Parent container animation */
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+/* Individual skill animation */
+const itemVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.4, ease: "easeOut" },
+  },
+};
+
 const Skill = ({ icon, label, color }) => (
-  <div className="flex flex-col items-center gap-2 p-4  rounded-xl shadow-md hover:scale-105 transition">
+  <motion.div
+    variants={itemVariants}
+    whileHover={{ scale: 1.08 }}
+    className="flex flex-col items-center gap-2 p-4 rounded-xl shadow-md"
+  >
     <div className={`text-4xl ${color}`}>{icon}</div>
     <p className="text-sm font-medium text-gray-700">{label}</p>
-  </div>
+  </motion.div>
 );
+
 const Skills = () => {
   const skills = [
     { icon: <FaHtml5 />, label: "HTML", color: "text-orange-500" },
@@ -37,13 +66,19 @@ const Skills = () => {
     { icon: <SiKalilinux />, label: "Kali Linux", color: "text-blue-600" },
     { icon: <SiMysql />, label: "SQL", color: "text-blue-500" },
   ];
-  return <div>
-     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {skills.map((skill, index) => (
-            <Skill key={index} {...skill} />
-          ))}
-        </div>
-  </div>;
+
+  return (
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6"
+    >
+      {skills.map((skill, index) => (
+        <Skill key={index} {...skill} />
+      ))}
+    </motion.div>
+  );
 };
 
 export default Skills;

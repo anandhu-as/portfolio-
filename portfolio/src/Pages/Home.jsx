@@ -1,8 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center px-4 text-center space-y-6 sm:space-y-8">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="min-h-screen flex flex-col justify-center items-center px-4 text-center space-y-6 sm:space-y-8"
+    >
       <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-gray-900">
         Hello <span className="text-blue-400">hoomans!</span>
       </h1>
@@ -21,13 +27,15 @@ const Home = () => {
         "trying to understand life and CSS"
       </blockquote>
 
-      <a
+      <motion.a
         href="https://typenio.vercel.app/"
-        className="mt-4 inline-block bg-gray-800 text-white px-6 py-3 rounded-full font-semibold text-lg sm:text-xl transition transform hover:scale-105 hover:bg-gray-900"
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.95 }}
+        className="mt-4 inline-block bg-gray-800 text-white px-6 py-3 rounded-full font-semibold text-lg sm:text-xl"
       >
         Read My Thoughts
-      </a>
-    </div>
+      </motion.a>
+    </motion.div>
   );
 };
 
