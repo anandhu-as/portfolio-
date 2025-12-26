@@ -9,7 +9,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative min-h-screen bg-gradient-to-r from-sky-300 to bg-pink-200">
-s
+
         <div className="relative z-10">
           <NavBar />
           <Routes>
