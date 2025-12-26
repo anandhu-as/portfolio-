@@ -17,7 +17,7 @@ import {
   SiMysql,
 } from "react-icons/si";
 
-/* Parent container animation */
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -29,7 +29,7 @@ const containerVariants = {
   },
 };
 
-/* Individual skill animation */
+
 const itemVariants = {
   hidden: { opacity: 0, y: 20, scale: 0.95 },
   visible: {
