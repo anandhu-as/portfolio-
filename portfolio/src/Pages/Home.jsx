@@ -1,0 +1,34 @@
+import React from "react";
+
+const Home = () => {
+  return (
+    <div className="min-h-screen flex flex-col justify-center items-center px-4 text-center space-y-6 sm:space-y-8">
+      <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-gray-900">
+        Hello <span className="text-blue-400">hoomans!</span>
+      </h1>
+
+      <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-xl">
+        I'm Anandhu. I code, write blogs, read, and sometimes just scroll the
+        world away.
+      </p>
+
+      <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-xl">
+        Passionate about creating, learning, and sharing ideas—one project and
+        one story at a time.
+      </p>
+
+      <blockquote className="italic text-gray-500 max-w-md text-center sm:text-lg md:text-xl">
+        "trying to understand life and CSS"
+      </blockquote>
+
+      <a
+        href="https://typenio.vercel.app/"
+        className="mt-4 inline-block bg-gray-800 text-white px-6 py-3 rounded-full font-semibold text-lg sm:text-xl transition transform hover:scale-105 hover:bg-gray-900"
+      >
+        Read My Thoughts
+      </a>
+    </div>
+  );
+};
+
+export default Home;
