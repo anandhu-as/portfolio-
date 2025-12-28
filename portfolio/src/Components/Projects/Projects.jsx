@@ -1,6 +1,7 @@
 import React from "react";
 import animehub from "../../Images/animehub.png";
 import typen from "../../Images/typen.png";
+import ape from "../../Images/ape.png"
 const Projects = () => {
   const projects = [
     {
@@ -18,9 +19,10 @@ const Projects = () => {
         "This website allow users to explore and discover various animeseries,we use the Jikan API which provide data about anime,manga and anime related content",
     },
     {
-      name: "Will do more projects",
-      link: "#",
-      image: "",
+      name: "BoredApes",
+      link: "https://e-commerce-fvu7jdf5z-anandhu-as.vercel.app",
+      image: ape,
+      description:"Bored Apes are a specific collection of 10,000 non-fungible tokens. Each NFT is a singular image of a unique Bored Ape. Every image is a portrait of an Ape with specific characteristics. This app is made for learning purposes. "
     },
     {
       name: "Will do more projects",
