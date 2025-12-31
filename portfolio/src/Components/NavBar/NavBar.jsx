@@ -28,7 +28,7 @@ const NavBar = () => {
                 <FaGithub />
               </a>
               <a
-                href="https://www.linkedin.com/in/anandhu-as-aa44b0248/"
+                href="https://www.linkedin.com/in/anandhuuas"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-blue-600"
