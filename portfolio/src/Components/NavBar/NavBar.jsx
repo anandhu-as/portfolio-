@@ -66,21 +66,21 @@ const NavBar = () => {
           <div className="flex flex-col items-center gap-4 text-xl text-gray-700 pb-2">
             <div className="flex gap-6 text-2xl">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/anandhu-as"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FaGithub />
               </a>
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/anandhuuas"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FaLinkedin />
               </a>
               <a
-                href="https://instagram.com/yourusername"
+                href="https://www.instagram.com/ana_ndhu_as?igsh=MWpmb3Z3ZGplNDYz"
                 target="_blank"
                 rel="noreferrer"
               >
