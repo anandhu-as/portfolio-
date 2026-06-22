@@ -34,6 +34,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
       <head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5250274773815589"
+     crossorigin="anonymous"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
