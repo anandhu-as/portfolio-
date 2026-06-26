@@ -26,6 +26,18 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const themeScript = `(function() {
+  try {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  } catch (e) {}
+})();`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,25 +46,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const savedTheme = localStorage.getItem('theme');
-                  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.remove('dark');
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
+        <link href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap" rel="stylesheet" />
       </head>
-      <body>{children}</body>
+      <body>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} suppressHydrationWarning />
+        {children}
+      </body>
     </html>
   );
 }

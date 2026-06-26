@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 interface HeaderProps {
   myName: string;
@@ -12,7 +13,7 @@ export default function Header({ myName }: HeaderProps) {
 
   useEffect(() => {
     const isDark = document.documentElement.classList.contains("dark");
-    setTheme(isDark ? "dark" : "light"); // eslint-disable-line react-hooks/set-state-in-effect
+    setTheme(isDark ? "dark" : "light");
 
     const handleScroll = () => {
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -46,13 +47,34 @@ export default function Header({ myName }: HeaderProps) {
         style={{ transform: `scaleX(${scrollProgress})` }}
       />
       <div className="max-w-2xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="font-serif text-lg font-bold tracking-tight text-foreground/90 hover:opacity-80 transition-opacity">
-          {myName}
-        </div>
+        <Link href="/" className="header-logo hover:opacity-80 transition-opacity cursor-pointer flex items-center" aria-label="Home">
+          <svg className="w-8 h-8 hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 2C6.5 2 2 6 2 12c0 5 3.5 8.5 10 10 6.5-1.5 10-5 10-10 0-6-4.5-10-10-10z"
+              fill="#FF3B30"
+            />
+            <path
+              d="M4.5 11c1.5-2 4-2.5 6-1 0 1-1 3.5-2.5 4.5-1.5-1.5-3-2.5-3.5-3.5z"
+              fill="#000000"
+            />
+            <path
+              d="M5.5 11c1-1.3 3-1.8 4.5-.8 0 .8-.8 2.8-2 3.6-1-1.2-2-2-2.5-2.8z"
+              fill="#FFFFFF"
+            />
+            <path
+              d="M19.5 11c-1.5-2-4-2.5-6-1 0 1 1 3.5 2.5 4.5 1.5-1.5 3-2.5 3.5-3.5z"
+              fill="#000000"
+            />
+            <path
+              d="M18.5 11c-1-1.3-3-1.8-4.5-.8 0 .8.8 2.8 2 3.6 1-1.2 2-2 2.5-2.8z"
+              fill="#FFFFFF"
+            />
+          </svg>
+        </Link>
         <button
           onClick={toggleTheme}
           aria-label="Toggle theme"
-          className="p-2.5 rounded-full border border-border-custom/40 hover:border-accent/60 bg-background/50 hover:bg-accent/5 text-foreground/80 hover:text-accent transition-all duration-300 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          className="theme-toggle-btn p-2.5 rounded-full border border-border-custom/40 hover:border-accent/60 bg-background/50 hover:bg-accent/5 text-foreground/80 hover:text-accent transition-all duration-300 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         >
           {theme === "dark" ? (
             <svg

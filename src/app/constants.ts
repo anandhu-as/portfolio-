@@ -6,7 +6,7 @@ export const socialLinks = {
   github: "https://github.com/anandhu-as",
   linkedin: "https://linkedin.com/in/anandhuuas",
   strava: "https://www.strava.com/athletes/1185322479",
-  instagram: "https://www.instagram.com/ana_ndhu_as/",
+  instagram: "https://www.instagram.com/anandhuuas/",
 };
 const currentYear = new Date().getFullYear();
 const age = currentYear - 2006;
@@ -71,16 +71,19 @@ export const educationItems = [
     degree: "Bachelor of Computer Applications",
     period: "2023 — 2026",
     school: "T. John College (Autonomous), Bangalore",
+    completed: true,
   },
   {
     degree: "Higher Secondary Education (Class 11 & 12)",
     period: "2021 — 2023",
     school: "Vijaya Higher Secondary School, Pulpally • Computer Science",
+    completed: true,
   },
   {
     degree: "Secondary School Education (Class 10)",
     period: "2020 — 2021",
     school: "St. Mary's High School, Mullenkolley",
+    completed: true,
   },
 ];
 

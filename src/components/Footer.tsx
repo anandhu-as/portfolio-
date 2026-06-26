@@ -13,37 +13,19 @@ interface FooterProps {
 
 export default function Footer({ footer, socialLinks }: FooterProps) {
   return (
-    <footer className="reveal text-sm sm:text-base text-muted-foreground/80 leading-relaxed font-light" aria-label="Connect Info">
-      <p>
-        {footer.text}{" "}
+    <footer className="reveal text-sm sm:text-base text-muted-foreground/80 leading-relaxed font-light preserve-3d" aria-label="Connect Info">
+      <div className="bg-border-custom/5 dark:bg-zinc-950/40 border border-border-custom/25 rounded-lg px-4 py-3 font-mono text-xs text-foreground/85 flex flex-wrap items-center gap-2 mb-4 preserve-3d layer-depth-content">
+        <span className="text-accent font-bold select-none">❯</span>
+        <span>contact --email</span>
         <Link
           href={`mailto:${footer.email}`}
-          className="custom-link"
+          className="text-accent hover:text-accent-hover font-semibold underline decoration-accent/30 decoration-2 transition-colors duration-300"
         >
           {footer.email}
         </Link>
-        .
-      </p>
+      </div>
       <p className="mt-2">
-        Or you can{" "}
-        <Link
-          href={socialLinks.strava}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="custom-link"
-        >
-          come run with me
-        </Link>{" "}
-        on Strava and{" "}
-        <Link
-          href={socialLinks.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="custom-link"
-        >
-          connect on LinkedIn
-        </Link>
-        .
+        Or you can come run with me on Strava and connect on LinkedIn.
       </p>
     </footer>
   );
