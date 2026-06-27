@@ -29,11 +29,11 @@ export default function Footer({ footer, socialLinks }: FooterProps) {
       </div>
       <p className="mt-2">
         Or you can come run with me on{" "}
-        <Link href={socialLinks.strava} className="underline">
+        <Link href={socialLinks.strava} className="custom-link">
           Strava{" "}
         </Link>
         and connect on{" "}
-        <Link href={socialLinks.strava} className="underline">
+        <Link href={socialLinks.linkedin} className="custom-link">
           LinkedIn.
         </Link>
       </p>

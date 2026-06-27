@@ -412,11 +412,18 @@ export default function Home() {
 
       <section className="hero-section px-4 sm:px-6">
         <div className="mb-4 sm:mb-6 flex justify-center items-center">
-          <img
-            src="/3.jpg"
-            alt={myName}
-            className="rounded-[15px] object-cover"
-            style={{ width: '150px', height: '200px' }}
+          <TiltedCard
+            imageSrc="/3.jpg"
+            altText={myName}
+            captionText="anandhu"
+            containerHeight="200px"
+            containerWidth="150px"
+            imageHeight="200px"
+            imageWidth="150px"
+            rotateAmplitude={12}
+            scaleOnHover={1.05}
+            showMobileWarning={false}
+            showTooltip={true}
           />
         </div>
         <h1 className="hero-title">
@@ -424,11 +431,11 @@ export default function Home() {
         </h1>
         <div className="hero-subtitle-container max-w-2xl mx-auto px-4 mt-4">
           <BlurText
-            text="Hello! I'm your friendly neighborhood developer, a 20-year-old software developer dedicated to building clean, accessible, and high-performance user interfaces that balance technical precision with polished design."
+            text="Hello there! I'm your friendly neighborhood developer, a 20-year-old software developer dedicated to building clean, accessible, and high-performance user interfaces that balance technical precision with polished design."
             delay={35}
             animateBy="words"
             direction="bottom"
-            className="text-sm md:text-base font-normal leading-relaxed text-foreground opacity-90"
+            className="text-sm sm:text-base font-normal leading-relaxed text-foreground opacity-90"
           />
         </div>
         <SocialIconLinks links={socialLinks} variant="plain" className="justify-center mt-6" />
@@ -439,7 +446,7 @@ export default function Home() {
           <h2 id="about-heading" className="resume-section-title">
             About Me
           </h2>
-          <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm md:text-base leading-relaxed text-foreground/75 font-normal">
+          <div className="space-y-3 sm:space-y-4 text-sm sm:text-base leading-relaxed text-foreground/75 font-normal">
             {bio.paragraphs.map((paragraph, index) => (
               <p key={index} className="reveal-item">{paragraph}</p>
             ))}
@@ -449,45 +456,24 @@ export default function Home() {
             <h3 className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-accent border-b border-border-custom/20 pb-2">
               Technical Skills
             </h3>
-            <div className="space-y-3 sm:space-y-4">
+            <div className="space-y-4">
               <div>
-                <span className="font-semibold text-foreground uppercase text-xs tracking-wider block mb-2">Languages & Frameworks</span>
-                <div className="flex flex-wrap gap-2">
-                  {["JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Express", "Redux", "Zustand", "Tailwind CSS"].map((tech) => (
-                    <span
-                      key={tech}
-                      className="skill-tag inline-flex items-center px-2.5 py-1 text-xs font-mono bg-accent/5 dark:bg-zinc-900/40 text-foreground border border-accent/15 hover:border-accent/40 rounded-md transition-all duration-300 hover:scale-105 cursor-default hover:text-accent hover:shadow-accent-glow select-none"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                <span className="font-semibold text-foreground uppercase text-xs tracking-wider block mb-1">Languages & Frameworks</span>
+                <p className="text-sm text-foreground/80 leading-relaxed font-normal">
+                  JavaScript, TypeScript, React, Next.js, Node.js, Express, Redux, Zustand, Tailwind CSS
+                </p>
               </div>
               <div>
-                <span className="font-semibold text-foreground uppercase text-xs tracking-wider block mb-2">Databases & Tools</span>
-                <div className="flex flex-wrap gap-2">
-                  {["PostgreSQL", "MongoDB", "Supabase", "Firebase", "Upstash", "SQL Querying", "Git", "Linux", "Kali Linux"].map((tool) => (
-                    <span
-                      key={tool}
-                      className="skill-tag inline-flex items-center px-2.5 py-1 text-xs font-mono bg-accent/5 dark:bg-zinc-900/40 text-foreground border border-accent/15 hover:border-accent/40 rounded-md transition-all duration-300 hover:scale-105 cursor-default hover:text-accent hover:shadow-accent-glow select-none"
-                    >
-                      {tool}
-                    </span>
-                  ))}
-                </div>
+                <span className="font-semibold text-foreground uppercase text-xs tracking-wider block mb-1">Databases & Tools</span>
+                <p className="text-sm text-foreground/80 leading-relaxed font-normal">
+                  PostgreSQL, MongoDB, Supabase, Firebase, Upstash, SQL Querying, Git, Linux, Kali Linux
+                </p>
               </div>
               <div>
-                <span className="font-semibold text-foreground uppercase text-xs tracking-wider block mb-2">Passions & Interests</span>
-                <div className="flex flex-wrap gap-2">
-                  {["Software Development", "Calisthenics", "Long-Distance Running", "Reading"].map((interest) => (
-                    <span
-                      key={interest}
-                      className="skill-tag inline-flex items-center px-2.5 py-1 text-xs font-mono bg-accent/5 dark:bg-zinc-900/40 text-foreground border border-accent/15 hover:border-accent/40 rounded-md transition-all duration-300 hover:scale-105 cursor-default hover:text-accent hover:shadow-accent-glow select-none"
-                    >
-                      {interest}
-                    </span>
-                  ))}
-                </div>
+                <span className="font-semibold text-foreground uppercase text-xs tracking-wider block mb-1">Passions & Interests</span>
+                <p className="text-sm text-foreground/80 leading-relaxed font-normal">
+                  Software Development, Calisthenics, Long-Distance Running, Reading
+                </p>
               </div>
             </div>
           </div>

@@ -1,18 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Comic_Neue } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-sans",
+const comic = Comic_Neue({
+  variable: "--font-comic",
   subsets: ["latin"],
-  weight: ["400", "500"],
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["300", "400", "700"],
   display: "swap",
 });
 
@@ -44,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${comic.variable}`} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
